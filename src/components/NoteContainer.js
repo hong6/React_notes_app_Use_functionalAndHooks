@@ -9,9 +9,11 @@ const NoteContainer = (props) => {
 
     return (
       <div className="note-container">
-        <NoteSelectors notes={props.notes} 
-        selectedNoteId = {props.selectedNoteId}
-        onClickNote = {props.onClickNote}
+        <NoteSelectors 
+          notes={props.notes} 
+          selectedNoteId = {props.selectedNoteId}
+          onClickNote = {props.onClickNote}
+          searchText ={props.searchText}
         />
         <NoteEditor 
           selectedNote={selectedNote}

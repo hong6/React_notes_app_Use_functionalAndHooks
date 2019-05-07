@@ -1,10 +1,11 @@
-import React, { useState} from 'react';
+import React from 'react';
 import {formatTitle, formatTimestamp} from '../helpers';
 
 const NoteSelector = (props) => { 
 
     return (
-        <div className={"note-selector " + (props.id === props.selectedNoteId ? 'active' : '') }
+        <div 
+            className={"note-selector " + (props.id === props.selectedNoteId ? 'active' : '') }
             onClick = {()=>{props.onClickNote(props.id)}}           
         >
             <p className="note-selector-title">{formatTitle(props.body)}</p>

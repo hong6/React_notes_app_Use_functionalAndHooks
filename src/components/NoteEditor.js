@@ -7,6 +7,7 @@ const NoteEditor = (props) => {
     props.onNoteEditorChange(event.target.value);
   }
 
+  if(props.selectedNote){
     return (
       <div className="note-editor">
         <p className="note-editor-info">
@@ -18,6 +19,9 @@ const NoteEditor = (props) => {
         />
       </div>
     );
+  }else{
+    return null;
+  }    
 }
 
 export default NoteEditor;
